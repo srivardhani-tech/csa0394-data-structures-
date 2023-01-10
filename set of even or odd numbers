@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main()
+{
+int a[200],b,c,l,i;
+printf("enter the limit for the array\n");
+scanf("%d",&l);
+printf("enter the values\n");
+for(i=0;i<l;i++)
+{
+	scanf("%d",&a[i]);
+}
+printf("the elements are:");
+for(i=0;i<l;i++)
+{
+printf("[%d ]",a[i]);
+}
+for(i=0;i<l;i++)
+{
+	if(a[i]%2==0)
+	{
+		printf("\nthe number %d is even",a[i]);
+	}
+	else
+	{
+		printf("\nthe number %d is odd",a[i]);
+	}
+}
+}
