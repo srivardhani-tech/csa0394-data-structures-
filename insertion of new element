@@ -1,0 +1,30 @@
+#include<stdio.h> 
+int insertElement(int arr[], int elements, int keyToBeInserted, int size) 
+{ 
+if (elements >= size) 
+return elements; 
+arr[elements] = keyToBeInserted;   
+return (elements + 1); 
+}  
+int main() 
+{ 
+int array[20],h,s,i,j,KeyToBeInserted;
+printf("enter the limit for th array\n");
+scanf("%d",&h);
+printf("enter the elements\n");
+for(i=0;i<h;i++)
+{
+	scanf("%d",&array[i]);
+}
+int size = sizeof(array) / sizeof(array[0]); 
+printf("enter the element you want to INSERT\n");
+scanf("%d",&KeyToBeInserted); 
+printf("n Before Insertion: "); 
+for (j = 0; j<i; j++) 
+printf("%d  ", array[j]); 
+i = insertElement(array, i,KeyToBeInserted, size); 
+printf("n After Insertion: "); 
+for (j = 0; j < i; j++) 
+printf("%d  ",array[j]); 
+return 0; 
+}
